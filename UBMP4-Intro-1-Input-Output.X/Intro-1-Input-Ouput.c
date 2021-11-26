@@ -276,7 +276,7 @@ if(SW5 == 0)
  *    before MPLAB-X produces an error message? (Hint: can you think of a fast
  *    and efficient way of guessing an unknown number?)
  * The highest it goes is 4200, I found that out by going up by thousands 
- (plus 1) then adding a nine once I couldn't go higher. I went from said nine 
+ (plus 1) then adding a nine once I couldn't go higher. I went from said nine down 
  until I reached 2, I did each placement value to make sure that was the highest 
  it could go. Also for fun I've added in a bunch of zeros after 1000, but nothing 
  worked higher then 1000. 
