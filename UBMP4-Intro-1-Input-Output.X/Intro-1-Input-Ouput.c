@@ -41,6 +41,8 @@ int main(void)
             __delay_ms(1000);
             LED6 = 1;
             __delay_ms(1000);
+            LED1 = 1;
+            __delay_ms(1000);
             LED3 = 0;
             __delay_ms(500);
             LED4 = 0;
@@ -48,6 +50,8 @@ int main(void)
             LED5 = 0;
             __delay_ms(500);
             LED6 = 0;
+            __delay_ms(500);
+            LED1 = 0;
             __delay_ms(500);
             LED3 = 1;
             __delay_ms(1000);
@@ -57,6 +61,8 @@ int main(void)
             __delay_ms(1000);
             LED6 = 1;
             __delay_ms(1000);
+            LED1 = 1;
+            __delay_ms(1000);
             LED3 = 0;
             __delay_ms(500);
             LED4 = 0;
@@ -64,6 +70,8 @@ int main(void)
             LED5 = 0;
             __delay_ms(500);
             LED6 = 0;
+            __delay_ms(500);
+            LED1 = 0;
             __delay_ms(500);
         }
         
@@ -202,7 +210,6 @@ if(SW5 == 0)
  * 7. Let's explore logical conditions using 'if' statements. Replace the code
  *    added in 6, above, with this nested if code to make a logical AND
  *    condition that will light LED D4 only if both SW3 and SW4 are pressed:
-
         // Nested if 'AND' code
         if(SW3 == 0)
         {
