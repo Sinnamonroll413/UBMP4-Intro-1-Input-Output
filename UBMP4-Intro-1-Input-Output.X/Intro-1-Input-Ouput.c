@@ -194,19 +194,21 @@ if(SW5 == 0)
         LED5 = 0;
 
  *    First, try pressing and releasing SW3 and SW4 one at a time.
- * 
+ * They go one at a time, staying on until I stop pressing the button.
  *    Next, press and hold SW3 while pressing and releasing SW4. Does it work
  *    as expected?
- * With the while statement yeah it works, but if that wasn't there then it 
- wouldn't work.
+ * It does work as expected, that is because pressing an if statement first allows
+ it to continue to check the rest of the code. But if you press the While
+ statement first, then it will stay in that loop until we let go of the button, 
+ nothing else will be checked in the meantime of that while loop.
  *    Next, try press and holding SW4 while pressing and releasing SW3. Does it
  *    work as expected? Explain the difference in operation between the 'if' and
  *    'while' structures making up the momentary button code.
- * If is something that happens when you want your chip to do something right as 
- it's reading the code, for while it's something that should be happening at 
- the same time that the previous code goes. If it's with a flashy pattern 
- then it wont work as well, but if its just one light after another then
- it should work just fine. 
+ * 'If' is something that happens when you want your chip to do something right as 
+ it's reading the code, it checks the code repeatedly over and over again. 
+ For 'While' however, it stays in a loop of checking that singluar piece of code,
+ instead of checking the whole code overall. Pressing SW4 and pressing SW3 will not work,
+ it will only do the SW4 code, because it is a 'while' statement.
  * 7. Let's explore logical conditions using 'if' statements. Replace the code
  *    added in 6, above, with this nested if code to make a logical AND
  *    condition that will light LED D4 only if both SW3 and SW4 are pressed:
@@ -264,8 +266,7 @@ if(SW5 == 0)
         }
 
  *    Describe the conditions under which LED4 turns on.
- * The light is probably a different brightness setting, 
- whether its brighter or dimmer depends on a few things. 
+ * Nothing is different. 
  * 
  * Programming Activities
  * 
@@ -347,10 +348,10 @@ if(SW5 == 0)
  *    of LED D4 compare between its normal on state following SW3 being pressed
  *    to this new state when both SW3 and SW4 are bing held? Can you explain
  *    why it changes?
- * The brightness chances because the battery is trying to get to all corners of the chip, 
- when theres more then one (or two really) buttons pressed, so then it'll be having 
- more energy to put into what's needing power. Another way it changes is because of having 
- extra power being pumped out with two buttons pushed compared to one button pushed. 
+ * The brightness chances because the stop button is trying to turn if off while
+ the on button is keeping it on. Which makes it dimmer in lighting coompared 
+ to other LED's. Another way it changes is because of having extra power 
+ being pumped out with two buttons pushed compared to one button pushed. 
  * 8. As you can imagine, an industrial machine that is able to turn on even
  *    while its 'Stop' button is pressed represents a significant safety hazard.
  *    Using a logical conditional operator, modify the start-stop program from
@@ -363,4 +364,18 @@ if(SW5 == 0)
  *    connected to the microcontroller instead of the anode (positive) pin as
  *    with the other LEDs. This means that you need to make D1's output a zero
  *    to turn D1 on. Try it! Make a program that controls or flashes LED D1.
+ if(SW4 == 0 && SW5 == 1)
+(^^ )
+ if(sw4q == 0 && SW5 != 0)
+ (^^ makes sure it stays off)
+ {
+
+
+     LED5 = 1;
+ }
+
+ if(SW5 == 0)
+ {
+     LED5 = 0;
+ }
  */
