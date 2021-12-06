@@ -365,9 +365,7 @@ if(SW5 == 0)
  *    with the other LEDs. This means that you need to make D1's output a zero
  *    to turn D1 on. Try it! Make a program that controls or flashes LED D1.
  if(SW4 == 0 && SW5 == 1)
-(^^ )
  if(sw4q == 0 && SW5 != 0)
- (^^ makes sure it stays off)
  {
 
 
